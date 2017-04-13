@@ -1,0 +1,333 @@
+@font-face {
+  font-family: "TitilliumBold";
+  src: url(fonts/TitilliumText22L003.otf);
+}
+
+@font-face {
+  font-family: "Titillium";
+  src: url(fonts/TitilliumText22L002.otf);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Titillium", Arial, sans-serif;
+  background-image: url(/img/site_bg.png);
+  background-position: center top;
+  background-size: cover;
+}
+
+.page-wraper {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/*************  Header  **************/
+
+.page-logo {
+  height: 165px;
+  position: relative;
+}
+
+.page-logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(/img/top_logo_pic.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: calc(100% - 50px);
+  margin: 25px 0;
+}
+
+.page-logo .visually-hidden {
+  position: absolute;
+  margin: 0 0 0 -9999999px ;
+}
+
+
+/*************  Forms  **************/
+
+
+
+/*******  Container box  ********/
+
+.forms-container {
+  padding: 0 2%;
+}
+
+.form-title {
+  font-family: "TitilliumBold", Arial, sans-serif;
+  font-size: 3.2rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+}
+
+.forms {
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+/*******  Controls  ********/
+
+.form-control {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  margin: 10px 0 20px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-control:last-child {
+  border: none;
+}
+
+
+/***  Icons  ***/
+
+.control-icon {
+  position: absolute;
+  top: 5px;
+  padding-right: 20px;
+  display: block;
+  width: 40px;
+  height: 30px;
+  border-right: 1px solid rgba(0, 0, 0, 0.23);
+  background-image: url("/img/icon-sprite.png");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) 5px;
+  filter: opacity(.2);
+  transition: .15s filter ease-in-out;
+}
+
+/***  icon positions ***/
+
+.form-control:nth-child(2) .control-icon,
+.form-control:nth-child(3) .control-icon {
+  background-position: calc(100% - 20px) -78px;
+}
+
+.form-control:nth-child(4) .control-icon,
+.recover-form .form-control:nth-child(1) .control-icon,
+.send-email .form-control:nth-child(2) .control-icon,
+.subscribe .form-control:nth-child(1) .control-icon {
+  background-position: calc(100% - 20px) -33px;
+}
+
+.form-control:nth-child(5) .control-icon {
+  background-position: calc(100% - 20px) -117px;
+}
+
+.recover-form .form-control:nth-child(2) .control-icon {
+  background-position: calc(100% - 20px) -157px;
+}
+
+
+/***  Inputs  ***/
+
+label, select {
+  cursor: pointer;
+}
+
+input {
+  cursor: text;
+}
+
+.form-control input, .form-control select {
+  box-sizing: border-box;
+  font-family: "Titillium", Arial, sans-serif;
+  background-color: transparent;
+  border: none;
+  padding: 0px 10px 0px 80px;
+  min-width: 100%;
+  height: 40px;
+  color: #afafaf;
+  box-shadow: inset -4px -15px 45px -30px rgba(0,0,0,0.12);
+}
+
+.form-control option {
+  max-width: calc(100% - 80px);
+}
+
+input[type=text]:focus+label {
+  filter: opacity(.5);
+}
+
+/*** checkbox  ***/
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  position: relative;
+  font-size: 1.3rem;
+  color: #afafaf;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.checkbox::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.checkbox::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 13px;
+  height: 13px;
+  background-color: #88c814;
+  background-image: linear-gradient( 180deg , rgba(255, 255, 255, .4) 0%, rgba(0, 0, 0, .1) 100%);
+  opacity: 0;
+  border-radius: 5px;
+  transition: .15s all ease-in-out;
+}
+
+.checkbox span {
+  width: calc(100% - 45px;)
+}
+
+input:checked+.checkbox::after {
+  opacity: 1;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+/***  Buttons  ***/
+
+.form-button {
+  background-color: #88c814;
+  background-image: linear-gradient( 180deg , rgba(255, 255, 255, .4) 0%, rgba(0, 0, 0, .1) 100%);
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #3a9a00;
+  font-family: "TitilliumBold", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0px 12px 0px rgba(0, 0, 0, 0);
+  transition: all .2s ease-in-out;
+}
+
+.button-size-half {
+  max-width: 45%;
+}
+
+.disagree-button {
+  border: 1px solid #a2202a;
+  background-color: #f4495b;
+  background-image: linear-gradient( 180deg , rgba(255, 255, 255, .4) 0%, rgba(0, 0, 0, .1) 100%);
+}
+
+.form-button:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 13px 12px -15px rgba(0, 0, 0, 0.9);
+}
+
+.form-button:disabled {
+  opacity: .5;
+}
+
+.form-button:disabled:hover {
+  cursor: no-drop;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/***  Text Area  ***/
+
+.message-box {
+  box-sizing: border-box;
+  width: 100%;
+  height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  resize: none;
+  background-color: transparent;
+  padding: 10px;
+  box-shadow: inset -4px -15px 60px -31px rgba(0,0,0,0.12);
+}
+
+
+/***  Footer  ***/
+
+footer {
+  max-width: 100%;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  opacity: .5;
+  text-align: center;
+}
+
+footer img {
+  max-width: 85%;
+}
+
+.adres-img {
+  width: 55%;
+  opacity: .5;
+}
+
+footer h3 {
+  margin: 0;
+  height: 1.6rem;
+  margin-left: -99999px;
+}
+
+
+@media screen and (min-width: 760px) {
+  .form-wraper {
+    float: left;
+    width: 45%;
+  }
+
+  .form-wraper:nth-child(2),
+  .form-wraper:nth-child(3),
+  .form-wraper:nth-child(5) {
+    float: right;
+  }
+
+  .message-box {
+    height: 250px;
+  }
+
+  footer {
+    float: right;
+    padding-top: 40px;
+    width: 45%;
+    margin-right: 10px;
+  }
+}

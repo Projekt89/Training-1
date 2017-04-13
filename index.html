@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Masterlab</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+
+    <div class="page-wraper">
+      <header>
+        <div class="page-logo">
+          <h1 class="visually-hidden">Masterlab creative</h1>
+        </div>
+      </header>
+
+
+      <main>
+
+        <div class="forms-container">
+
+
+          <div class="form-wraper">
+            <h2 class="form-title">Register Form</h2>
+            <form class="forms register" action="index.html" method="post">
+              <div class="form-container">
+                <div class="form-control">
+                  <input type="text" name="register-user" placeholder="Username" id="register-user">
+                  <label for="register-user" class="control-icon"></label>
+                </div>
+                <div class="form-control">
+                  <input type="text" name="register-password" placeholder="Password" id="register-password">
+                  <label for="register-password" class="control-icon"></label>
+                </div>
+                <div class="form-control">
+                  <input type="text" name="register-confirm" placeholder="Confirm Password" id="register-confirm">
+                  <label for="register-confirm" class="control-icon"></label>
+                </div>
+                <div class="form-control">
+                  <input type="text" name="register-email" placeholder="Email" id="register-email">
+                  <label for="register-email" class="control-icon"></label>
+                </div>
+                <div class="form-control">
+                  <label for="location" class="control-icon"></label>
+                  <select id="location" name="register-location">
+                    <option value="" disabled selected>Your Location</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Germany">Germany</option>
+                    <option value="United States">United States</option>
+                    <option value="China">China</option>
+                  </select>
+                </div>
+                <input type="checkbox" name="confirm" id="register-terms">
+                <label for="register-terms" class="checkbox"><span>I have read and accapt the terms of use.</span></label>
+                <button type="button" name="" class="form-button">Sign up</button>
+              </div>
+            </form>
+          </div>
+
+
+          <div class="form-wraper">
+            <h2 class="form-title">Sign In Form</h2>
+            <form class="forms sign-in-form" action="index.html" method="post">
+              <div class="form-container">
+                <div class="form-control">
+                  <input type="text" name="sing-in-user" placeholder="Username" id="sing-in-user">
+                  <label for="sing-in-user" class="control-icon"></label>
+                </div>
+                <div class="form-control">
+                  <input type="text" name="sign-in-password" placeholder="Password" id="sign-in-password">
+                  <label for="sign-in-password" class="control-icon"></label>
+                </div>
+                <div class="form-control">
+                  <input type="checkbox" name="confirm" id="remember-user">
+                  <label for="remember-user" class="checkbox"><span>Remember me</span></label>
+                  <button type="button" name="" class="form-button button-size-half">Sign in</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+          <div class="form-wraper">
+            <h2 class="form-title">Recover Form</h2>
+            <form class="forms recover-form" action="index.html" method="post">
+              <div class="form-container">
+                <div class="form-control">
+                  <input type="text" name="recover-email" placeholder="Enter your Email" id="recover-email">
+                  <label for="recover-email" class="control-icon"></label>
+                </div>
+                <div class="form-control">
+                  <input type="text" name="recover-phone" placeholder="Enter youer Phone number" id="recover-phone">
+                  <label for="recover-phone" class="control-icon"></label>
+                </div>
+                <div class="form-control">
+                  <button type="button" name="" class="form-button button-size-half">Send</button>
+                  <button type="button" name="" class="form-button button-size-half" disabled>Done</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+          <div class="form-wraper">
+            <h2 class="form-title">Send Email</h2>
+            <form class="forms send-email" action="index.html" method="post">
+              <div class="form-container">
+                <div class="form-control">
+                  <input type="text" name="send-email-user" placeholder="Your Name" id="send-email-user">
+                  <label for="send-email-user" class="control-icon"></label>
+                </div>
+                <div class="form-control">
+                  <input type="text" name="send-email-email" placeholder="Your Email" id="send-email-email">
+                  <label for="send-email-email" class="control-icon"></label>
+                </div>
+                <textarea name="send-email-message" placeholder="Type your message" class="message-box"></textarea>
+                <input type="checkbox" name="confirm" id="send-email-copy">
+                <label for="send-email-copy" class="checkbox"><span>Send a copy to my Email</span></label>
+                <button type="button" name="" class="form-button">Send Email</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="form-wraper">
+            <h2 class="form-title">Subscribe Form</h2>
+            <form class="forms subscribe" action="index.html" method="post">
+              <div class="form-container">
+                <div class="form-control">
+                  <input type="text" name="subscribe-email" placeholder="Enter your Email" id="subscribe-email">
+                  <label for="subscribe-email" class="control-icon"></label>
+                </div>
+                <div class="form-control">
+                  <button type="button" name="" class="form-button button-size-half">Subscribe</button>
+                  <button type="button" name="" class="form-button button-size-half disagree-button">No, Thanks</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+        </div>
+
+      </main>
+
+      <footer>
+        <img src="/img/top_logo_pic.png" alt="">
+        <h3>www.masteralb.com</h3>
+        <img src="/img/www.png" alt="" class="adres-img">
+      </footer>
+    </div>
+  </body>
+</html>
